@@ -1,0 +1,1 @@
+The script will give list of users which are currently login on the machine.

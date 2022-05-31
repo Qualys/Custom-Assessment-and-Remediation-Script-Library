@@ -1,0 +1,1 @@
+﻿Get-LocalUser | Select "Name","SID","LastLogon"

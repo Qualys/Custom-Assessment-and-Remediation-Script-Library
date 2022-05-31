@@ -1,0 +1,1 @@
+The script will enable Real-Time protection as per CIS guide line.

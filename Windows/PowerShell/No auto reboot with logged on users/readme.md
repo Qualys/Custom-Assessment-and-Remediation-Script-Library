@@ -1,0 +1,1 @@
+The script will set GPO to disable auto reboot after windows update.

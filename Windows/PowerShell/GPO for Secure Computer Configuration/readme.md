@@ -1,0 +1,1 @@
+The script will set GPO for Secure Computer Configuration.
