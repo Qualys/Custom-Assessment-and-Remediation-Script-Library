@@ -1,0 +1,1 @@
+The script will check for the server configuration and application version.  

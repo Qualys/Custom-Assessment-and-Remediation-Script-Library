@@ -19,5 +19,4 @@ Get-ChildItem $Key -Rec -EA SilentlyContinue | ForEach-Object {
             "`n"
         }
     } 
-
 }

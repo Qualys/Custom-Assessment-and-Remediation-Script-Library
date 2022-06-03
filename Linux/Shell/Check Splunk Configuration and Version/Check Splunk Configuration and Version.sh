@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #Organization Splunk Server Configuration
+#User Need to change/add configuration in conf variable as per your requirement
+
 conf="[general]
 serverName = fimdemo3
 pass4SymmKey = $7$ydFLF38oNC7F816+5u24Mylyuc9feUCBSAa8i0KgDeVgE2hOu/gFmg==
@@ -29,13 +31,14 @@ stack_id = free
 [httpServer]
 disableDefaultPort = true"
 
-
-if [[ $(< /opt/splunk/etc/system/local/server.conf) == "$conf" ]]
+#Change confLocation variable lactation to the configuration file location whose configuration needs to check
+confLocation=/opt/splunk/etc/system/local/server.conf
+if [[ $(< $confLocation) == "$conf" ]]
 then
 echo "Accurate Configuration"
 else
 echo "Inaccurate Configuration"
-echo "$conf" > /opt/splunk/etc/system/local/server.conf
+echo "$conf" > $confLocation
 echo "Configuration updated as per organization's hardening guidelines"
 fi
 

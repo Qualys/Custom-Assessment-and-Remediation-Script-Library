@@ -1,3 +1,3 @@
-Check Installed kernel configuration
+Check Installed kernel configuration  
 
-This script will check for the kernal configuration present on the system
+This script will check for the kernel configuration present on the system

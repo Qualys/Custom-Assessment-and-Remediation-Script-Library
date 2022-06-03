@@ -1,1 +1,1 @@
-The script give the name of currently login user
+The script give the name of currently login user.

@@ -1,1 +1,0 @@
-Registry Key that will track the last files and folders opened and is used to populate data in “Recent” menus of the Start menu. 

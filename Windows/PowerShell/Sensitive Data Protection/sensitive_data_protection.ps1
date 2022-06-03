@@ -1,9 +1,12 @@
-#Sensitive Data Protection
-#The Files with Sensitive Data will be encrypt and attribute will be set to Read-only
+#Sensitive Data Discovery 
+#Flag PII Data like CCN, SSN and personal information like DOB, US Phone numbers, Email addresses, US Street addresses, Passport numbers from files under users documents #OUTPUT Format (| separated): CCN/SSN/Phone_Numbers/Email_Address/Street_Address|File Path|Hits in the file 
 #Edit startpath variable as directory path in which data is to be searched for all the files under that directory (Recursively) 
  
 $ProgressPreference = "SilentlyContinue";
 $ErrorActionPreference= "SilentlyContinue";
+
+$global:temp=0
+
 $users = Get-ChildItem c:\users | ?{ $_.PSIsContainer } #Enumerate All local users
 foreach ($user in $users)
 {
@@ -55,6 +58,7 @@ foreach ($user in $users)
 		$lnPASS = $(Select-String -Path $file -Pattern $PASSpattern | select -ExpandProperty LineNumber).count 
 		if($lnPASS -ne 0)
 		{
+			$global:temp=1
 			# Get content of the file
 			$FileContent = Get-Content $File
 	
@@ -64,7 +68,7 @@ foreach ($user in $users)
 			# Base64 Encode file 
 			$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-			# Save Base64 Encode file with extension .b64
+			# Save Base64 Enconde file with extension .b64
 			#$fileContentEncoded | Set-content ($file + ".b64")
 			$fileContentEncoded | Set-content ($file)
 			Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -79,6 +83,7 @@ foreach ($user in $users)
 			$VISA = (Select-String -Path $file -Pattern $VISApattern | select -ExpandProperty LineNumber).count
 			if($VISA -ne 0)
 			{
+				$global:temp=1
 				# Get content of the file
 				$FileContent = Get-Content $File
 	
@@ -88,7 +93,7 @@ foreach ($user in $users)
 				# Base64 Encode file 
 				$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-				# Save Base64 Encode file with extension .b64
+				# Save Base64 Enconde file with extension .b64
 				#$fileContentEncoded | Set-content ($file + ".b64")
 				$fileContentEncoded | Set-content ($file)
 				Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -97,6 +102,7 @@ foreach ($user in $users)
 			$MASTER = (Select-String -Path $file -Pattern $MASTERpattern | select -ExpandProperty LineNumber).count
 			if($MASTER -ne 0)
 			{
+				$global:temp=1
 				# Get content of the file
 				$FileContent = Get-Content $File
 	
@@ -106,7 +112,7 @@ foreach ($user in $users)
 				# Base64 Encode file 
 				$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-				# Save Base64 Encode file with extension .b64
+				# Save Base64 Enconde file with extension .b64
 				#$fileContentEncoded | Set-content ($file + ".b64")
 				$fileContentEncoded | Set-content ($file)
 				Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -115,6 +121,7 @@ foreach ($user in $users)
 			$AE = (Select-String -Path $file -Pattern $AEpattern | select -ExpandProperty LineNumber).count
 			if($AE -ne 0)
 			{
+				$global:temp=1
 				# Get content of the file
 				$FileContent = Get-Content $File
 	
@@ -124,7 +131,7 @@ foreach ($user in $users)
 				# Base64 Encode file 
 				$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-				# Save Base64 Encode file with extension .b64
+				# Save Base64 Enconde file with extension .b64
 				#$fileContentEncoded | Set-content ($file + ".b64")
 				$fileContentEncoded | Set-content ($file)
 				Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -133,6 +140,7 @@ foreach ($user in $users)
 			$Diners = (Select-String -Path $file -Pattern $DCpattern | select -ExpandProperty LineNumber).count
 			if($Diners -ne 0)
 			{
+				$global:temp=1
 				# Get content of the file
 				$FileContent = Get-Content $File
 	
@@ -142,7 +150,7 @@ foreach ($user in $users)
 				# Base64 Encode file 
 				$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-				# Save Base64 Encode file with extension .b64
+				# Save Base64 Enconde file with extension .b64
 				#$fileContentEncoded | Set-content ($file + ".b64")
 				$fileContentEncoded | Set-content ($file)
 				Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -151,6 +159,7 @@ foreach ($user in $users)
 			$Discover = (Select-String -Path $file -Pattern $Dpattern | select -ExpandProperty LineNumber).count
 			if($Discover -ne 0)
 			{
+				$global:temp=1
 				# Get content of the file
 				$FileContent = Get-Content $File
 	
@@ -160,7 +169,7 @@ foreach ($user in $users)
 				# Base64 Encode file 
 				$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-				# Save Base64 Encode file with extension .b64
+				# Save Base64 Enconde file with extension .b64
 				#$fileContentEncoded | Set-content ($file + ".b64")
 				$fileContentEncoded | Set-content ($file)
 				Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -169,6 +178,7 @@ foreach ($user in $users)
 			$JCB = (Select-String -Path $file -Pattern $JCBpattern | select -ExpandProperty LineNumber).count
 			if($JCB -ne 0)
 			{
+				$global:temp=1
 				# Get content of the file
 				$FileContent = Get-Content $File
 	
@@ -178,7 +188,7 @@ foreach ($user in $users)
 				# Base64 Encode file 
 				$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-				# Save Base64 Encode file with extension .b64
+				# Save Base64 Enconde file with extension .b64
 				#$fileContentEncoded | Set-content ($file + ".b64")
 				$fileContentEncoded | Set-content ($file)
 				Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -187,6 +197,7 @@ foreach ($user in $users)
 			$other = $lnCCN - ($VISA+$MASTER+$AE+$Diners+$Discover+$JCB)
 			if($other -ne 0)
 			{
+				$global:temp=1
 				# Get content of the file
 				$FileContent = Get-Content $File
 	
@@ -196,7 +207,7 @@ foreach ($user in $users)
 				# Base64 Encode file 
 				$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-				# Save Base64 Encode file with extension .b64
+				# Save Base64 Enconde file with extension .b64
 				#$fileContentEncoded | Set-content ($file + ".b64")
 				$fileContentEncoded | Set-content ($file)
 				Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -207,6 +218,7 @@ foreach ($user in $users)
 		$lnSSN = $(Select-String -Path $file -Pattern $SSNpattern | select -ExpandProperty LineNumber).count 
 		if($lnSSN -ne 0)
 		{
+			$global:temp=1
 			# Get content of the file
 			$FileContent = Get-Content $File
 	
@@ -216,7 +228,7 @@ foreach ($user in $users)
 			# Base64 Encode file 
 			$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-			# Save Base64 Encode file with extension .b64
+			# Save Base64 Enconde file with extension .b64
 			#$fileContentEncoded | Set-content ($file + ".b64")
 			$fileContentEncoded | Set-content ($file)
 			Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -225,6 +237,7 @@ foreach ($user in $users)
 		$birthdate = $(Select-String -Path $file -Pattern $birth | select -ExpandProperty LineNumber).count 
 		if($birthdate -ne 0)
 		{
+			$global:temp=1
 			# Get content of the file
 			$FileContent = Get-Content $File
 	
@@ -234,7 +247,7 @@ foreach ($user in $users)
 			# Base64 Encode file 
 			$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-			# Save Base64 Encode file with extension .b64
+			# Save Base64 Enconde file with extension .b64
 			#$fileContentEncoded | Set-content ($file + ".b64")
 			$fileContentEncoded | Set-content ($file)
 			Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -244,6 +257,7 @@ foreach ($user in $users)
 		$email = $(Select-String -Path $file -Pattern $emailregex | select -ExpandProperty LineNumber).count 
 		if($email -ne 0)
 		{
+			$global:temp=1
 			# Get content of the file
 			$FileContent = Get-Content $File
 	
@@ -253,7 +267,7 @@ foreach ($user in $users)
 			# Base64 Encode file 
 			$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-			# Save Base64 Encode file with extension .b64
+			# Save Base64 Enconde file with extension .b64
 			#$fileContentEncoded | Set-content ($file + ".b64")
 			$fileContentEncoded | Set-content ($file)
 			Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -263,6 +277,7 @@ foreach ($user in $users)
 		$address = $(Select-String -Path $file -Pattern $usaddress | select -ExpandProperty LineNumber).count 
 		if($address -ne 0)
 		{
+			$global:temp=1
 			# Get content of the file
 			$FileContent = Get-Content $File
 	
@@ -272,7 +287,7 @@ foreach ($user in $users)
 			# Base64 Encode file 
 			$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-			# Save Base64 Encode file with extension .b64
+			# Save Base64 Enconde file with extension .b64
 			#$fileContentEncoded | Set-content ($file + ".b64")
 			$fileContentEncoded | Set-content ($file)
 			Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -282,6 +297,7 @@ foreach ($user in $users)
 		$phonenumber = $(Select-String -Path $file -Pattern $usphone | select -ExpandProperty LineNumber).count 
 		if($phonenumber -ne 0)
 		{
+			$global:temp=1
 			# Get content of the file
 			$FileContent = Get-Content $File
 	
@@ -291,7 +307,7 @@ foreach ($user in $users)
 			# Base64 Encode file 
 			$fileContentEncoded = [System.Convert]::ToBase64String($fileContentInBytes)
 	
-			# Save Base64 Encode file with extension .b64
+			# Save Base64 Enconde file with extension .b64
 			#$fileContentEncoded | Set-content ($file + ".b64")
 			$fileContentEncoded | Set-content ($file)
 			Get-Item -Path $file | % { $_.IsReadOnly=$True}
@@ -299,4 +315,9 @@ foreach ($user in $users)
     } 
 }
 
-"Files with Sensitive Data have been encrypted and attribute has been set to Read-only"
+if ($global:temp -gt 0){
+    "Files with Sensitive Data have been encrypted and attribute has been set to Read-only"
+}
+else {
+    "No Files with Sensitive Data have been found"
+}
