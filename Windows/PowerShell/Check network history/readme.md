@@ -1,0 +1,1 @@
+Use this script to identify the networks (wireless or wired) that the computer has been connected to, identify domain name or intranet name, the SSID, and the gateway MAC address. 

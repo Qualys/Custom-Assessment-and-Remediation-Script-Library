@@ -1,0 +1,1 @@
+Use this script to set the account lockout threshold to maximum 5 attempts as per CIS recommendation.

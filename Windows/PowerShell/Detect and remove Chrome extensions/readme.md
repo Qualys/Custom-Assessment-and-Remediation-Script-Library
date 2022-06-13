@@ -1,1 +1,1 @@
-The script will detect and remove Chrome extensions install on chrome browser. 
+Use this script to detect and remove Chrome extensions installed on the Chrome browser. 

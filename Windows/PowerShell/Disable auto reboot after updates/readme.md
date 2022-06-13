@@ -1,0 +1,1 @@
+Use this script to disable auto reboot after a Windows update as per CIS guidelines.

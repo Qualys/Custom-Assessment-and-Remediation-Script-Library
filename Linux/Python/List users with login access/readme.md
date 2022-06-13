@@ -1,0 +1,1 @@
+Use this script to get a list of users who have login access on the target computer.

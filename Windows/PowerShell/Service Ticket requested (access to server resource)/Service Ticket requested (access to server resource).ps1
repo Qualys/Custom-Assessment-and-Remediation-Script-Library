@@ -21,7 +21,7 @@ function Get-LogonEvents ($id,$evetnType,$snAddress,$uAccount,$uDomain,$serviceN
     if ($temp -eq 0){"No Events found for $evetnType"}
 }
 
-$evetnType = " Service Ticket requested";$snAddress=6;$uAccount=0;$uDomain=1;$serviceName=2;$status=8;$ipPort=7;$transmittedServices=10;$id=4769
+$evetnType = "Service Ticket requested";$snAddress=6;$uAccount=0;$uDomain=1;$serviceName=2;$status=8;$ipPort=7;$transmittedServices=10;$id=4769
 $temp=0
 $evetnType
 "-------------------------------------------------------------------------"

@@ -1,0 +1,1 @@
+Use this script to verify if the minimum number of days since the last password change is set to 1 or more days. If the value is less than 1 day, the script will change it to 1 day as per CIS guidelines.

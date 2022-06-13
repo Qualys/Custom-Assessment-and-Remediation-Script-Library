@@ -1,0 +1,1 @@
+Use this script to set windows firewall restrictions  

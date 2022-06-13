@@ -1,0 +1,1 @@
+Use this script to get a list of signed or unsigned RPMs present on the target system.

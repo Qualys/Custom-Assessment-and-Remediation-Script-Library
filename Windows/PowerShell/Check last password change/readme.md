@@ -1,0 +1,1 @@
+Use this script to get the date and time when the password of a specific local user was changed last.

@@ -1,0 +1,1 @@
+Use this script to check whether PAM is enable or not. If PAM is disabled, the script will change the setting to enable PAM for SSH.  

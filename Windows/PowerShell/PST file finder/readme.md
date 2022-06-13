@@ -1,1 +1,1 @@
-The script will scan the system to find the files with PST extension.
+Use this script to scan the system to find files with PST extension.

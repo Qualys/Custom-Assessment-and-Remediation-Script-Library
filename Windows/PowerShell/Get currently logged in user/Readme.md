@@ -1,0 +1,1 @@
+Use this script to get the username of the currently logged in user.

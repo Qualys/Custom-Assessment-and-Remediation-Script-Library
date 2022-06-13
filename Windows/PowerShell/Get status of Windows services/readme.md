@@ -1,0 +1,1 @@
+Use this script to give detail status of Windows services.

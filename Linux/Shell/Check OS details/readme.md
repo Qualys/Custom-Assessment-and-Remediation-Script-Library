@@ -1,0 +1,1 @@
+Use this script to get details of the Operating System currently running on the target system.

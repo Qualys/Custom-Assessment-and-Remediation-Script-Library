@@ -1,0 +1,1 @@
+Use this script to get the date and time when a system was powered on or restarted last.

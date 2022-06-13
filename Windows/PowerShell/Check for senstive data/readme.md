@@ -1,0 +1,3 @@
+Use this script to flag PII Data such as CCN, SSN, and personal information such as DOB, US phone numbers, email addresses, US street addresses, passport numbers from files in the user's documents #OUTPUT format (| separated): CCN/SSN/Phone_Numbers/Email_Address/Street_Address|File Path|Hits in the file.   
+
+Edit the startpath variable as directory path in which data is to be searched for all the files within the directory (recursively).

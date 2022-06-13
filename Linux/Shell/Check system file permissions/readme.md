@@ -1,0 +1,1 @@
+Use this script to set owner, group, and permissions of System file as per CIS guidelines.  

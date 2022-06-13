@@ -1,0 +1,1 @@
+Use this script to check whether empty password is prohibited or not. If empty password is allowed, the script will change the setting to prohibit empty password.  

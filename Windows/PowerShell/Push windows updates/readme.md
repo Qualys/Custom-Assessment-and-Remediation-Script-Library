@@ -1,1 +1,1 @@
-The script will download and install windows updates.
+Use this script to download and install Windows updates.

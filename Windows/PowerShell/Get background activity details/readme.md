@@ -1,0 +1,1 @@
+Use this script to get the full path of the executable file that was run on the system and its last execution date and time.  

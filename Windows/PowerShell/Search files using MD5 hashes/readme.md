@@ -1,3 +1,3 @@
-The script will search all the file using provided MD5 hashes.  
+Use this script to search for files that are using specified MD5 hashes.  
 
-Before running script put your hashes and directory location where you want to scan.
+Before running the script, enter the required hashes and the directory locations that you want to scan.

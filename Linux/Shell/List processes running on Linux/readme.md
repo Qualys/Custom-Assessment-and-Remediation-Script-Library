@@ -1,0 +1,1 @@
+Use this script to get a list of the processes running on Linux machine with the PID and the user account in whose context the process is running.

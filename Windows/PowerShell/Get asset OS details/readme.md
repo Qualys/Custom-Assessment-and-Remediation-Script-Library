@@ -1,0 +1,1 @@
+Use this script to get OS details of assets.

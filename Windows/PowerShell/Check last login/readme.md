@@ -1,0 +1,1 @@
+Use this script to list the local accounts on the system and their equivalent security identifiers.

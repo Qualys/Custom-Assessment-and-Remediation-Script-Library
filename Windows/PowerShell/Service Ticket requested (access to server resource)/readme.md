@@ -1,0 +1,1 @@
+Get list of Kerberos Ticket Granting Service (TGS) ticket request.

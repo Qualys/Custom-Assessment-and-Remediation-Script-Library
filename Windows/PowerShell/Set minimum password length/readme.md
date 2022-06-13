@@ -1,0 +1,1 @@
+Use this script to verify the value for minimum password length. If the value is less than 14 characters, the script will set the value to 14.

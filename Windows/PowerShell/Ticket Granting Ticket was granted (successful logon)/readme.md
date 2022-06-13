@@ -1,0 +1,1 @@
+Get list of Granting Ticket was granted for successful logon.  

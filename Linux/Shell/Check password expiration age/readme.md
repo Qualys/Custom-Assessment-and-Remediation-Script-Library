@@ -1,0 +1,1 @@
+Use this script to check if the value for maximum password expiration age is 365 days or less. If the value is greater than 365 days, the script will change it to 60 days as per CIS guidelines.

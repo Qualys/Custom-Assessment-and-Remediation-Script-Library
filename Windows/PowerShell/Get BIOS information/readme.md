@@ -1,0 +1,1 @@
+Use this script to get BIOS information of the assets.

@@ -1,0 +1,1 @@
+Use this script to get the drive details such as total drive memory, available memory, and drive letter.

@@ -1,0 +1,1 @@
+Use this script to get the list of accounts with privileged access.
