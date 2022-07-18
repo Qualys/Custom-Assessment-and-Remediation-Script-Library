@@ -1,0 +1,18 @@
+Windows Network File System Remote Code Execution Vulnerability (CVE-2022-22039) 
+
+To successfully exploit this vulnerability, an attacker must succeed in a race condition. Making an unauthenticated, carefully constructed call to a Network File System (NFS) service could be used to exploit this vulnerability over the network remotely. 
+
+Mitigation refers to a setting, common configuration, or general best-practice, existing in a default state, that could reduce the severity of exploitation of a vulnerability. The following mitigating factors might be helpful in your situation:
+
+This vulnerability is not exploitable in NFSV4.1. Prior to updating your version of Windows that protects against this vulnerability, you can mitigate an attack by disabling NFSV3. This may adversely affect your ecosystem and should only be used as a temporary mitigation.
+
+The following PowerShell command will disable NFSV3:
+
+Set-NfsServerConfiguration -EnableNFSV3 $false
+
+After this, you will need to restart NFS server or reboot the machine.
+
+To restart NFS server, start a cmd window with Run as Administrator, enter the following commands:
+
+nfsadmin server stop
+nfsadmin server start
