@@ -1,1 +1,0 @@
-Script will set minimum password length.

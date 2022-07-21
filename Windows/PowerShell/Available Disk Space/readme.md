@@ -1,1 +1,0 @@
-The script will give drives ditail like total drive memory, available memory and drive letter.

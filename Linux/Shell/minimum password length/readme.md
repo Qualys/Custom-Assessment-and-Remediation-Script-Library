@@ -1,1 +1,0 @@
-The script will verify if the minimum password length is 14 or more and if the password length is less then 14 then it will change password length to 14 characters as per CIS recommendations.

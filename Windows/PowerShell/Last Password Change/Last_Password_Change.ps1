@@ -1,1 +1,0 @@
-﻿Get-LocalUser | Select "Name","SID","PasswordLastSet"

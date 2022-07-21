@@ -1,1 +1,0 @@
-Get-CimInstance -ClassName Win32_Service | Format-Table -Property ProcessId,State,Status,StartMode,Name,DisplayName -AutoSize -Wrap

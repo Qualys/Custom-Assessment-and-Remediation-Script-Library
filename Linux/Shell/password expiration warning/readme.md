@@ -1,3 +1,0 @@
-The PASS_WARN_AGE parameter in /etc/login.defs allows an administrator to notify users that their password will expire in a defined number of days. It is recommended that the PASS_WARN_AGE parameter be set to 7 or more days.
-
-The script will verify if the password expiration warning days is 7 or more and if the password expiration warning days is less then 7 then it will change password expiration warning days to 7 days as per CIS recommendations.

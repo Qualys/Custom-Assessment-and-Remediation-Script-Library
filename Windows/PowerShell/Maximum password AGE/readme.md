@@ -1,1 +1,0 @@
-Script will set maximum password age (After how many days password will expire).

@@ -1,1 +1,0 @@
-systeminfo|FIND "System Boot Time"

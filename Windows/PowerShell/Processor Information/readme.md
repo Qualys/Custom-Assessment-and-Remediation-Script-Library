@@ -1,1 +1,0 @@
-The script will give Processor Information.

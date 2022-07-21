@@ -1,1 +1,0 @@
-The script will give details of OS currently running on the system.

@@ -1,1 +1,0 @@
-The script will give last date and time when system was boot.

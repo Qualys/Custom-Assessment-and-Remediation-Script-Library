@@ -1,1 +1,0 @@
-Use this script to get the list of Windows users.
