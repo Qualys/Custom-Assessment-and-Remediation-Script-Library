@@ -1,0 +1,1 @@
+The script will give OS Detail.

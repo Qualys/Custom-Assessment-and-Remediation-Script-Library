@@ -1,0 +1,1 @@
+Lists the last time the password of a specific local user has been changed.

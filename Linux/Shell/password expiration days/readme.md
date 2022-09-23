@@ -1,0 +1,3 @@
+The PASS_MAX_DAYS parameter in /etc/login.defs allows an administrator to force passwords to expire once they reach a defined age. It is recommended that the PASS_MAX_DAYS parameter be set to less than or equal to 365 days.
+
+The script will verify if the maximum password expiration days is 365 or less and if the maximum password expiration days is greater then 365 then it will change maximum password expiration days to 60 days as per CIS recommendations.

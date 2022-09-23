@@ -1,1 +1,0 @@
-The PowerShell script which will download and install latest version of Zoom for all users or update the current version.

@@ -1,0 +1,21 @@
+Spring Framework Zero-Day Remote Code Execution (Spring4Shell) Vulnerability  
+  
+A new zero-day Remote Code Execution (RCE) vulnerability, “Spring4Shell” or “SpringShell” was disclosed in the Spring framework. An unauthorized attacker can exploit this vulnerability to remotely execute arbitrary code on the target device.   
+  
+What is Spring Framework?   
+Spring-core is a prevalent framework widely used in Java applications that allows software developers to develop Java applications with enterprise-level components effortlessly.   
+  
+Which versions are vulnerable?   
+The vulnerability requires JDK version 9 or later to be running. Spring Framework versions 5.3.0 to 5.3.17, 5.2.0 to 5.2.19, and older versions are vulnerable. It allows remote attackers to plant a web shell when running Spring framework apps on top of JRE 9. It is caused by unsafe deserialization of given arguments that a simple HTTP POST request can trigger to allow full remote access.   
+  
+How can this be exploited?   
+The exploitation of this vulnerability relies on an endpoint with DataBinder enabled, which decodes data from the request body automatically. This property could enable an attacker to leverage Spring4Shell against a vulnerable application. In fact, the Spring framework class DataBinder warns about this in its documentation:   
+  
+“Note that there are potential security implications in failing to set an array of allowed fields. In the case of HTTP form POST data, for example, malicious clients can attempt to subvert an application by supplying values for fields or properties that do not exist on the form. In some cases, this could lead to illegal data being set on command objects or their nested objects. For this reason, it is highly recommended to specify the allowedFields property on the DataBinder.”   
+  
+What are the prerequisites to exploit this vulnerability?   
+JDK 9 or higher   
+Apache Tomcat as the Servlet container   
+Packaged as a traditional WAR (in contrast to a Spring Boot executable jar)   
+spring-webmvc or spring-webflux dependency   
+Spring Framework versions 5.3.0 to 5.3.17, 5.2.0 to 5.2.19, and older versions 

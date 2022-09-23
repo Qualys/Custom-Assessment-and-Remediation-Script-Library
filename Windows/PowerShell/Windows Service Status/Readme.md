@@ -1,0 +1,1 @@
+Give detail status of windows services.

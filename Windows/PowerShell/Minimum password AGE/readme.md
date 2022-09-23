@@ -1,0 +1,1 @@
+Script will change minimum password age (minimum no of days before user can change password)

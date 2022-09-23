@@ -1,0 +1,1 @@
+Lists the local accounts of the system and their equivalent security identifiers.

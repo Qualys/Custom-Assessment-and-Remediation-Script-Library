@@ -1,0 +1,3 @@
+The PASS_MIN_DAYS parameter in /etc/login.defs allows an administrator to prevent users from changing their password until a minimum number of days have passed since the last time the user changed their password. It is recommended that PASS_MIN_DAYS parameter be set to 1 or more days.  
+
+The script will verify if the minimum number of days is set to 1 or more days since last password was change and if minimum number of days is less then 1 then it will change minimum number of days to 1 day as per CIS recommendations

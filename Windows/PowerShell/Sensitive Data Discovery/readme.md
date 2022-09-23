@@ -1,0 +1,3 @@
+Sensitive Data Discovery  
+Flag PII Data like CCN, SSN and personal information like DOB, US Phone numbers, Email addresses, US Street addresses, Passport numbers from files under users documents #OUTPUT Format (| separated): CCN/SSN/Phone_Numbers/Email_Address/Street_Address|File Path|Hits in the file.   
+Edit startpath variable as directory path in which data is to be searched for all the files under that directory (Recursively)  

@@ -1,0 +1,1 @@
+The script is used to set the policy settings on local computer, such as Account policies and password policies.
