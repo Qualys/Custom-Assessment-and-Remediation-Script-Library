@@ -8,4 +8,4 @@ In no event shall Qualys be liable for any direct, indirect, incidental, special
 
 Scripts are from workaround/mitigations steps provided by Mircosoft.
 **New script will be avaliable on Tuesday Patch every month**
-Refer for Mitigation-> https://msrc.microsoft.com/update-guide/vulnerability/
+Refer for Mitigation- https://msrc.microsoft.com/update-guide/vulnerability/
