@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ 
 #User Need to change/add configuration in conf variable as per your requirement
 conf=$'remote 127.0.0.1\nproto udp\nport 1337\ndev tun\ncipher none\nauth none\nifconfig 127.0.0.2 127.0.0.4\nverb 3'
 

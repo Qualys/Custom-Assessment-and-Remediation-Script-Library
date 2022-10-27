@@ -1,1 +1,1 @@
-Use this script to get the list of users that are currently logged into the target computer.
+Use this script to get the list of users that are currently logged into the target computer. 

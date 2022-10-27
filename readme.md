@@ -13,8 +13,8 @@ The repository ***Custom-Assessment-and-Remediation-Script-Library*** contains u
 - Perl    
 - Lua    
   
-#### The ***CAR*** script library also includes scripts to help you detect and mitigate zero-day vulnerabilities.   
-    
-Besides this, Qualys provides out-of-the-box remediation scripts, which are specifically designed to improve the compliance posture of your assets. These scripts are primarily focused on hardening your servers based on CIS benchmarks.    
-    
+#### The ***CAR*** script library also includes scripts to help you detect and mitigate zero-day vulnerabilities.  
+  
+Besides this, Qualys provides out-of-the-box remediation scripts, which are specifically designed to improve the compliance posture of your assets. These scripts are primarily focused on hardening your servers based on CIS benchmarks.  
+  
 **Note:** This repository is independent of the product releases. Qualys adds new scripts based on incidents, requirements, and customer feedback.

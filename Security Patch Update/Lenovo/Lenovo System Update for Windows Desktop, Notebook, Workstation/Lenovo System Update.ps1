@@ -6,7 +6,7 @@ function System_update{
     # Clean temp file
     Remove-Item -Path $env:TEMP\system_update_5.07.0139.exe -Force    
 }
-
+ 
 function Critical_Recommended_Update {
     # Pushing Critical and Recommended updates
     reg add "HKLM\Software\Policies\Lenovo\System Update\UserSettings\General" /v AdminCommandLine /t REG_SZ /d '/CM -search R -action INSTALL -includerebootpackages 1,3,4,5 -noicon -nolicense' /f | Out-Null
