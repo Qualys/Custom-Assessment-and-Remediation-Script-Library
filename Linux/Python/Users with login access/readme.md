@@ -1,1 +1,1 @@
-The script will give list of users which have login access on the machine.
+The script will give list of users which have login access on the machine. 

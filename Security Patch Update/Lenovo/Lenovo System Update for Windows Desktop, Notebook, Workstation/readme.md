@@ -19,4 +19,4 @@ System Update downloads data updates for software, drivers, and BIOS from a Leno
   
 **Pre-requisites for the script**  
 * Host should have internet connectivity to download the system update  
-* PowerShell Execution policy should not be 'Restricted'  
+* PowerShell Execution policy should not be 'Restricted'

@@ -1,0 +1,1 @@
+Check custom app configuration and version.

@@ -7,7 +7,7 @@ MultiString: Specifies an array of null-terminated strings terminated by two nul
 Qword: Specifies a 64-bit binary number. Used for REG_QWORD values.  
 Unknown: Indicates an unsupported registry data type, such as REG_RESOURCE_LIST values.  
   
-List of controls covered on the script:  
+**List of controls covered on the script:**  
 CID: 10008  
 STMT: Status of the 'Local Admin Password Management' setting  
 CID: 10009  
