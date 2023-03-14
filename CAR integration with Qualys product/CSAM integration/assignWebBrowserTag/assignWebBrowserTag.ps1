@@ -29,7 +29,11 @@ function Set-Tag{
     $uri = 'https://qualysapi.qg2.apps.qualys.com/qps/rest/2.0/update/am/hostasset/'+$assetID
     $body = "{`n    `"ServiceRequest`": {`n        `"data`": {`n            `"HostAsset`": {`n                `"tags`": {`n                    `"add`": {`n                        `"TagSimple`": {`n                            `"id`": `"$tagID`"`n                        }`n                    }`n                }`n            }`n        }`n    }`n}"
     $response = (Invoke-RestMethod -uri $uri -Method 'POST' -Headers $headers -Body $body).OuterXml
-    $response
+    $response = [xml](Invoke-RestMethod -uri $uri -Method 'POST' -Headers $headers -Body $body).OuterXml
+    $out = Select-Xml -xml $response -XPath "/ServiceResponse" | Select -ExpandProperty Node
+    if ($out.responseCode -eq 'SUCCESS') {
+        Write-Host "`n`nTAG added successfully"
+    }
 }
 
 $RegPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*", "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"
