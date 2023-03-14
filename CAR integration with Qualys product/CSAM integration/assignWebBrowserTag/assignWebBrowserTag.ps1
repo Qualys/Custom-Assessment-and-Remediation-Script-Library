@@ -1,6 +1,6 @@
 $credContentInBytes = [System.Text.Encoding]::UTF8.GetBytes("<user>:<password>") # Need to provide cred
 $script:credEncoded = [System.Convert]::ToBase64String($credContentInBytes)
-$script:tagID = <TAG ID> # Need to provide tag ID that need to be assign
+$script:tagID = <TAG ID> # Need to provide TAG ID that need to be assign
 
 $count = 0
 $ipV4 = Test-Connection -ComputerName (hostname) -Count 1  | Select -ExpandProperty IPV4Address 
