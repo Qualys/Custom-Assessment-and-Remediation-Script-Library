@@ -8,7 +8,5 @@ In no event shall Qualys be liable for any direct, indirect, incidental, special
 **Description**  
 The script will assign TAG to assets on which web browser (Chrome or Firefox) found.  
 
-**Note**
-User need to provide Qualys credentials as well as TAG ID   
-
-
+**Note**  
+User need to provide Qualys credentials as well as TAG ID.
