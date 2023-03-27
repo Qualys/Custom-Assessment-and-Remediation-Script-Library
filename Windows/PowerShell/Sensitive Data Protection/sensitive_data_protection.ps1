@@ -12,44 +12,44 @@ foreach ($user in $users)
 {
     $startpath = "C:\Users\$user\Documents\" 
 
-    #Credit Card Number Regex 
-    $CCNpattern = '\b(?:\d[ -]*?){13,16}\b' 
-
-    #VISA Number Regex 
-    $VISApattern = '\b4(?:\d[ -]*?){12,15}\b'
-
-    # MASTERCARD Number Regex
-    $MASTERpattern = '\b(?:5[1-5](?:\d[ -]*?){2}|222(?:[1-9][ -]*?)|22(?:[3-9][0-9][ -]*?)|2[3-6](?:[0-9][ -]*?){2}|27[01](?:[0-9][ -]*?)|2[ -]*?7[ -]*?2[ -]*?0[ -]*?)(?:\d[ -]*?){12}\b'
-
-    # American Express Number Regex
-    $AEpattern = '\b3[47](?:\d[ -]*?){13}\b'
-
-    # Diners Club Number Regex
-    $DCpattern = '\b3[ -]*?(?:0[ -]*?[0-5][ -]*?|[68][ -]*?[0-9][ -]*?)(?:\d[ -]*?){11}\b'
-
-    # DISCOVER Number Regex
-    $Dpattern = '\b3[ -]*?[47][ -]*?(?:\d[ -]*?){13}\b'
-
-    # JCB CARD Number Regex
-    $JCBpattern = '\b(?:2[ -]*?1[ -]*?3[ -]*?1[ -]*?|1[ -]*?8[ -]*?0[ -]*?0[ -]*?|3[ -]*?5[ -]*?(?:\d[ -]*?){3})(?:\d[ -]*?){11}\b'
-
-    #Social Security Number Regex 
-    $SSNpattern = '\b\d{3}([- ]?)\d{2}([- ]?)\d{4}\b' 
-
-    #Birthdate Regex 
-    $birth = '\b\d{2}(?:[ \/-])\d{2}(?:[ \/-])\d{4}\b' 
-    
-    #US Phone number regex 
-    $usphone = '\b\+1\d{10}|\+1(?:[ -]*?)\d{3}(?:[ -]*?)\d{3}(?:[ -]*?)\d{4}\b' 
-
-    #US address 
-    $usaddress = '\b\d{1,8}\b[\s\S]{10,100}?\b(AK|AL|AR|AZ|CA|CO|CT|DC|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|MA|MD|ME|MI|MN|MO|MS|MT|NC|ND|NE|NH|NJ|NM|NV|NY|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VA|VT|WA|WI|WV|WY)\b\s\d{5}\b' 
-    
-    #Email 
-    $emailregex = '\b[a-z0-9._%\+\-]+@[a-z0-9.\-]+\.[a-z|]{2,6}\b'
-
-    #Passport regex
-    $PASSpattern = '\b[A-Za-z]{1}[0-9]{7}\b'
+    #Credit Card Number Regex
+	$CCNpattern = '\b(?:\d[ -]*?){13,16}\b'
+	
+	#VISA Number Regex
+	$VISApattern = '\b4(?:\d[ -]*?){12,15}\b'
+	
+	# MASTERCARD Number Regex
+	$MASTERpattern = '\b(?:5[1-5](?:\d[ -]*?){2}|222(?:[1-9][ -]*?)|22(?:[3-9][0-9][ -]*?)|2[3-6](?:[0-9][ -]*?){2}|27[01](?:[0-9][ -]*?)|2[ -]*?7[ -]*?2[ -]*?0[ -]*?)(?:\d[ -]*?){12}\b'
+	
+	# American Express Number Regex
+	$AEpattern = '\b3[47](?:\d[ -]*?){13}\b'
+	
+	# Diners Club Number Regex
+	$DCpattern = '\b3[ -]*?(?:0[ -]*?[0-5][ -]*?|[68][ -]*?[0-9][ -]*?)(?:\d[ -]*?){11}\b'
+	
+	# DISCOVER Number Regex
+	$Dpattern = '\b3[ -]*?[47][ -]*?(?:\d[ -]*?){13}\b'
+	
+	# JCB CARD Number Regex
+	$JCBpattern = '\b(?:2[ -]*?1[ -]*?3[ -]*?1[ -]*?|1[ -]*?8[ -]*?0[ -]*?0[ -]*?|3[ -]*?5[ -]*?(?:\d[ -]*?){3})(?:\d[ -]*?){11}\b'
+	
+	#Social Security Number Regex
+	$SSNpattern = '\b\d{3}([- ]?)\d{2}([- ]?)\d{4}\b'
+	
+	#Birthdate Regex
+	$birth = '\b\d{2}(?:[ \/-])\d{2}(?:[ \/-])\d{4}\b'
+	
+	#US Phone number regex
+	$usphone = '(?:\+1)?(?:[ -]*?)\d{3}(?:[ -]*?)\d{3}(?:[ -]*?)\d{4}\b'
+	
+	#US address
+	$usaddress = '\b\d{1,8}\b[\s\S]{10,100}?\b(AK|AL|AR|AZ|CA|CO|CT|DC|DE|FL|GA|HI|IA|ID|IL|IN|KS|KY|LA|MA|MD|ME|MI|MN|MO|MS|MT|NC|ND|NE|NH|NJ|NM|NV|NY|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VA|VT|WA|WI|WV|WY)\b\s\d{5}\b'
+	
+	#Email
+	$emailregex = '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b'
+	
+	#Passport regex
+	$PASSpattern = '\b[A-Za-z]{1}[0-9]{7}\b'
 
     #Script Start 
     gci -File $startpath -Recurse | ForEach-Object{$file = $_.FullName 
