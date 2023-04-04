@@ -1,6 +1,6 @@
 #!/bin/bash
 #Check if the system is base on RHEL
-if ((! command -v apt && ! command -v zypper && command -v yum)) >/dev/null 2>&1
+if ( ! command -v apt && ! command -v zypper && command -v yum ) >/dev/null 2>&1
 then
     echo -e "$(tput setaf 2)List of signed RPMs Installed on the system$(tput sgr0)\n"
     rpm -qa --qf '%{NAME}-%{VERSION}-%{RELEASE} %{SIGPGP:pgpsig} %{SIGGPG:pgpsig}\n' | grep -v "(none) (none)"
