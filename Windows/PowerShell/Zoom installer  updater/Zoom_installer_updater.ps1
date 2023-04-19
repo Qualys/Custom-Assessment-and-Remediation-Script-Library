@@ -4,4 +4,4 @@ Invoke-WebRequest -Uri "https://zoom.us/client/latest/ZoomInstallerFull.msi?arch
 msiexec /i $env:TEMP\ZoomInstallerFull.msi /quiet /qn /norestart ALLUSERS=1 /log $env:TEMP\zoom_install.log
 Write-Host "Log file is created under"
 ls $env:TEMP\zoom_install.log
-Remove-Item -Path $env:TEMP\ZoomInstallerFull.msi
+Remove-Item -Path $env:TEMP\ZoomInstallerFull.msi -Force
